@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background: #282c34;
+  color: #cae1e7;
 }
 
 .App-logo {
@@ -30,3 +32,54 @@
     transform: rotate(360deg);
   }
 }
+
+.title {
+  font-size: 8vw;
+}
+
+.sub-title {
+  background-color: #77E;
+  color: black;
+}
+.sub-title h2 {
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .sub-title {
+    background-color: #E77;
+  }
+  .sub-title h2 {
+    font-size: 17px;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .sub-title {
+    background-color: #7E7;
+  }
+  .sub-title h2 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 500px) {
+  .customer-row-3 .image {
+    display: none;
+  }
+}
+
+.customer-row {
+  background-color: #5554;
+}
+
+.customer-row-2 {
+  background-color: #DDD4;
+}
+
+.customer-row-3 {
+  background-color: #55F4;
+}
+
+

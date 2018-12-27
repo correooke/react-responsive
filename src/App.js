@@ -15,11 +15,11 @@ class App extends Component {
   renderItems = params => {
     switch (this.state.renderType) {
       case 0:
-        return <CustomerRow {...params} />;
+        return <CustomerRow key={params.id} {...params} />;
       case 1:
-        return <CustomerRow2 {...params} />;
+        return <CustomerRow2 key={params.id} {...params} />;
       case 2:
-        return <CustomerRow3 {...params} />;
+        return <CustomerRow3 key={params.id} {...params} />;
     
       default:
         return null;

@@ -2,6 +2,9 @@ import React from 'react';
 import MediaQuery from 'react-responsive';
 
 // query="(min-device-width: 1224px)"
+// Se utiliza el minWidth, que permite adaptar en ejecución de acuerdo al tamaño de la página
+// Pero si quisiera aplicarse el efecto sólo cuando se utiliza en dispositivo, de acuerdo 
+// al tamaño del mismo, se debería utilizar minDeviceWidth (aplica igual para el máximo)
 
 const CustomerRow = ({id, name, picture, onClick}) => {
     return (

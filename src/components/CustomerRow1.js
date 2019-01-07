@@ -6,18 +6,18 @@ import MediaQuery from 'react-responsive';
 // Pero si quisiera aplicarse el efecto sólo cuando se utiliza en dispositivo, de acuerdo 
 // al tamaño del mismo, se debería utilizar minDeviceWidth (aplica igual para el máximo)
 
-const CustomerRow = ({id, name, picture, onClick}) => {
+const CustomerRow1 = ({id, name, picture, onClick}) => {
     return (
         <>
             <MediaQuery minWidth={500}>
-                <div className='customer-row' key={id} onClick={onClick}>
+                <div className='customer-row-1' key={id} onClick={onClick}>
                     <h2>{name}</h2>
                     <img src={picture} alt=""/>
                     <p>Versión expandida</p>
                 </div>
             </MediaQuery>        
             <MediaQuery maxWidth={499}>
-                <div className='customer-row' key={id} onClick={onClick}>
+                <div className='customer-row-1' key={id} onClick={onClick}>
                     <h2>{name}</h2>
                     <p>Versión reducida</p>
                 </div>
@@ -26,4 +26,4 @@ const CustomerRow = ({id, name, picture, onClick}) => {
     );
 };
 
-export default CustomerRow;
+export default CustomerRow1;

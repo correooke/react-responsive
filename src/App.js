@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Customers from './components/Customers';
 import { data } from './data';
-import CustomerRow from './components/CustomerRow';
+import CustomerRow1 from './components/CustomerRow1';
 import CustomerRow2 from './components/CustomerRow2';
 import CustomerRow3 from './components/CustomerRow3';
 
@@ -15,7 +15,7 @@ class App extends Component {
   renderItems = params => {
     switch (this.state.renderType) {
       case 0:
-        return <CustomerRow key={params.id} {...params} />;
+        return <CustomerRow1 key={params.id} {...params} />;
       case 1:
         return <CustomerRow2 key={params.id} {...params} />;
       case 2:

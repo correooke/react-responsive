@@ -11,19 +11,15 @@ const CustomerRow2 = ({id, name, picture}) => {
                     matches => {
                         if (matches) {
                             return (<div className='customer-row-2' key={id}>
-                                <h2>{name}!</h2>
-                                <img className='element-animation' src={picture} alt=""/> 
-                                <p>
-                                    Utiliza MediaQuery con matches (versión pantalla grande)
-                                </p>
+                                <h2>{name}</h2>
+                                <img src={picture} alt=""/> 
+                                <p>Versión expandida (MQ)</p>
                             </div>);
                         } else {
                             return (
                             <div className='customer-row-2' key={id}>
-                                <h2>Nombre: {name}</h2>
-                                <p>
-                                    Utiliza MediaQuery con matches (versión pantalla chica)
-                                </p>
+                                <h2>{name}</h2>
+                                <p>Versión reducida  (MQ)</p>
                             </div>);
                         }
                     }

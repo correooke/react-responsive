@@ -5,25 +5,24 @@ import { data } from './data';
 import CustomerRow1 from './components/CustomerRow1';
 import CustomerRow2 from './components/CustomerRow2';
 import CustomerRow3 from './components/CustomerRow3';
+import CustomerRow4 from './components/CustomerRow4';
+
+const CustomerRow = {
+  '1': CustomerRow1,
+  '2': CustomerRow2,
+  '3': CustomerRow3,
+  '4': CustomerRow4,
+};
 
 class App extends Component {
 
   state = {
-    renderType: 0
+    renderType: 1
   }
 
   renderItems = params => {
-    switch (this.state.renderType) {
-      case 0:
-        return <CustomerRow1 key={params.id} {...params} />;
-      case 1:
-        return <CustomerRow2 key={params.id} {...params} />;
-      case 2:
-        return <CustomerRow3 key={params.id} {...params} />;
-    
-      default:
-        return null;
-    }
+    const Row = CustomerRow[this.state.renderType];
+    return <Row  key={params.id} {...params} />;
   }
 
   render() {
@@ -38,15 +37,18 @@ class App extends Component {
           <p>El sub-título se adapta a tamaños de pantalla por intervalos y cambia de color el contenedor con media query</p>
         </div>
         <div>
-          <button onClick={() => { this.setState({ renderType: 0 })}}>
+          <button onClick={() => { this.setState({ renderType: 1 })}}>
             Uso 2 ReactResponsive.MediaQuery por separado
           </button>
-          <button onClick={() => { this.setState({ renderType: 1 })}}>
+          <button onClick={() => { this.setState({ renderType: 2 })}}>
             Uso 1 ReactResponsive.MediaQuery con Matches
           </button>
-          <button onClick={() => { this.setState({ renderType: 2 })}}>
+          <button onClick={() => { this.setState({ renderType: 3 })}}>
             Uso MediaQuery CSS
           </button>
+          <button onClick={() => { this.setState({ renderType: 4 })}}>
+            Uso ReactResponsive.MediaQuery componente
+          </button>          
         </div>
         <Customers data={data} renderItems={this.renderItems} />
       </div>

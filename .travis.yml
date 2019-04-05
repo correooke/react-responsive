@@ -8,3 +8,16 @@ before_install:
 script: 
   - docker run oke/docker-react-responsive npm run test -- --coverage
 
+
+deploy:
+  provider: elasticbeanstalk 
+  region: "us-east-1"
+  app: "react-responsive"
+  env: "ReactResponsive-env"
+  bucket_name: "elasticbeanstalk-us-east-1-289548232838"
+  bucket_path: "react-responsive"
+  on: 
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"

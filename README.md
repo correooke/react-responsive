@@ -23,5 +23,13 @@ La segunda técnica que utilizamos es Media Query, una capacidad que brinda CSS 
 La tercer técnica, quizás la más avanzada y particular de react es el componente react-responsive. Esta librería expone el componente MediaQuery el cual acepta diferentes parámetros, y nos permite renderizar o no los elementos "child" de acuerdo al tamaño actual de la pantalla. Al contrario que las otras técnicas, donde simplemente ocultamos los elementos, en este caso directamente ya no forman parte del DOM. Esto es especialmente útil para el caso de dispositivos celulares, donde queremos primar la eficiencia y donde tampoco cabe la posibilidad de que la pantalla pueda agrandarse.
 Exploramos dos variantes de esta técnica, utilizando una variable de evaluación "match" y una función, y la más directa, con elementos "child" tal como mencionamos anteriormente.
 
+## Circuito de integración contínua
+
+Se utiliza TravisCI para la ejecución de las pruebas, asociado a la cuenta de Github donde se sube el código fuente.
+
+- Travis: https://travis-ci.com/correooke/react-responsive
+- GitHub: https://github.com/correooke/react-responsive
+- AWS: http://reactresponsive-env.burzjcektu.us-east-1.elasticbeanstalk.com/ (temporal)
+
 
 ### Autor: Emiliano Ocariz
